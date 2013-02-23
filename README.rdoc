@@ -11,12 +11,12 @@ This is an experiment to try and create an ascii art algorithm. You can see some
 
 == Creating your own ascii images
 
-AsciiPNG required several Ruby gems to be installed. You can install all of these in one go by running:
+AsciiPNG requires several Ruby gems to be installed. You can install all of these in one go by running:
 
     gem install AsciiPNG
 
 
-You'll need to clone the repository to your hard drive as the ascii_data folder is required for AsciiPNG to work. You can do this by running:
+You'll need to clone the repository as well as the ascii_data folder is required for AsciiPNG to work. You can do this by running:
 
     git clone git@github.com:vaneyckt/AsciiPNG.git
 
