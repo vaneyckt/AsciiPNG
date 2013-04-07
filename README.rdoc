@@ -6,7 +6,7 @@ This is an experiment to try and create an ascii art algorithm. You can see some
 
 - reduce the palette of the image to a lower number of colors. All examples were created by reducing images to 16 colors. This reduction is done by running the k-means clustering algorithm over all image pixels after these have been converted to the CIELAB color space. A {parallelized k-means clustering library}[https://github.com/vaneyckt/kmeans-clustering] was used for this. Note that this step is very slow and could be replaced with a faster histogram based approach.
 
-- use the contents of the ascii_data folder to associate each of the resulting reduced palette colors with an ascii character. This is done by dividing the reduced palette image into blocks of 8 x 16 pixels and replacing each block with the ascii character associated with its dominant color.
+- use the contents of the ascii_data folder to associate each of the resulting reduced palette colors with an ascii character. This is done by dividing the reduced palette image into blocks of 8 x 16 pixels and replacing each block with the ascii character associated with the block's dominant color.
 
 
 == Creating your own ascii images
