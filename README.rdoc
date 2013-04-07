@@ -2,11 +2,11 @@
 
 This is an experiment to try and create an ascii art algorithm. You can see some of the results in the examples folder. Note that only PNG images are supported. The algorithm itself works as follows:
 
-- load an image and convert each pixel to the {CIELAB color space}[http://en.wikipedia.org/wiki/Lab_color_space]. This is a perceptual color space that allows you to calculate a meaningful distance between two colors, as the Euclidean distance in this space corresponds to uniform changes in perceived color.
+- load an image and convert each pixel to the {CIELAB color space}[http://en.wikipedia.org/wiki/Lab_color_space]. This is a perceptual color space that allows for the calculation of a meaningful distance between two colors, as the Euclidean distance in this space corresponds to uniform changes in perceived color.
 
-- reduce the palette of the image to a lower number of colors. All examples were created by reducing images to 16 colors. This reduction is done by running the k-means clustering algorithm over all the pixels of the image after converting these to the CIELAB color space. I used a {parallelized k-means clustering library}[https://github.com/vaneyckt/kmeans-clustering] for this. Note that this step is very slow and could be replaced with a faster histogram based approach.
+- reduce the palette of the image to a lower number of colors. All examples were created by reducing images to 16 colors. This reduction is done by running the k-means clustering algorithm over all the pixels of the image after these have been converted to the CIELAB color space. A {parallelized k-means clustering library}[https://github.com/vaneyckt/kmeans-clustering] was used for this. Note that this step is very slow and could be replaced with a faster histogram based approach.
 
-- use the contents of the ascii_data folder to associate each of the resulting reduced palette colors with an ascii character. Divide the reduced palette image into blocks of 8 x 16 pixels and replace each block with the ascii character associated with its dominant color.
+- use the contents of the ascii_data folder to associate each of the resulting reduced palette colors with an ascii character. This is done by dividing the reduced palette image into blocks of 8 x 16 pixels and replacing each block with the ascii character associated with its dominant color.
 
 
 == Creating your own ascii images
